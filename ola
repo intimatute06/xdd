@@ -32,14 +32,48 @@ public class CLCalculadora {
     }
 
 }
+
+
+
 package Calculadora;
+
+import javax.swing.*;
 
 public class ObjCalculadora {
     String pantalla, modelo, operacion;
     double numero1 = 0;
     int numero2 = 0;
-    public void Ingresomodelo(){
-
+    public void IngresoInformacion(String modelo){
+        this.modelo = modelo;
+     pantalla = JOptionPane.showInputDialog("Ingrese el tipo de pantalla:");  
+      /*hay que guardar al atributo modelo*/
+        /*al momento de colocar pantalla = se guarda en la variable*/
     }
-
+    public void IngresoOperaciones(){
+        numero1 = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el numero 1:"));
+        numero2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero 2:"));
+        operacion = JOptionPane.showInputDialog("Ingresar la operacion:");
+        
+    }
+    public double CalculoOperaciones(){
+        double resultado = 0;
+        
+        switch(operacion){
+            case "+":
+                resultado = numero1 + numero2;
+                break;
+            case "-":
+                resultado = numero1 - numero2;
+                break;
+            case "*":
+                resultado = numero1 * numero2;
+                break;
+            case "/":
+                if(numero2 == 0){
+                    JOptionPane.showMessageDialog(null,"No se puede dividir para 0");
+                }
+                break;
+        }
+        return resultado;
+    }
 }
