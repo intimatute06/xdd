@@ -88,3 +88,18 @@ public class ObjCalculadora {
         return resultado;
     }
 }
+
+package Calculadora;
+
+import javax.swing.*;
+
+public class InicioPrograma {
+    public static void main(String [] args){
+        String modelo = JOptionPane.showInputDialog("Ingrese el modelo");
+
+        ObjCalculadora objCal = new ObjCalculadora();
+        objCal.IngresoInformacion(modelo);
+
+
+    }
+}
