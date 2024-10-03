@@ -32,3 +32,14 @@ public class CLCalculadora {
     }
 
 }
+package Calculadora;
+
+public class ObjCalculadora {
+    String pantalla, modelo, operacion;
+    double numero1 = 0;
+    int numero2 = 0;
+    public void Ingresomodelo(){
+
+    }
+
+}
