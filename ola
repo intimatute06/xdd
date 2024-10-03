@@ -45,7 +45,7 @@ public class ObjCalculadora {
     int numero2 = 0;
     public void IngresoInformacion(String modelo){
         this.modelo = modelo;
-     pantalla = JOptionPane.showInputDialog("Ingrese el tipo de pantalla:");
+        pantalla = JOptionPane.showInputDialog("Ingrese el tipo de pantalla:");
       /*hay que guardar al atributo modelo*/
         /*al momento de colocar pantalla = se guarda en la variable*/
         IngresoOperaciones();
@@ -62,6 +62,7 @@ public class ObjCalculadora {
 
     }
     public double CalculoOperaciones(){
+
         double resultado = 0;
 
         switch(operacion){
