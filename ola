@@ -1,0 +1,34 @@
+package Calculadora;
+
+import java.util.Scanner;
+
+public class CLCalculadora {
+    public static void main(String[] args)
+    {
+        /* Public cuando puedo o le permito ser utilizado entre clases
+        private cuando el metodo o variable es utilizado solo en la misma clase*/
+        //Declarar variables
+        String nombre, apellido;
+        int num1,num2;
+        double resultado;
+        //instanciar la clase
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Buenos Dias");
+        System.out.print("Ingrese el nombre:");
+        nombre = sc.nextLine();
+        System.out.print("Ingrese su apellido:");
+        apellido = sc.nextLine();
+        System.out.println("El nombre es: " + nombre +" Su apellido es: " + apellido);
+
+        /*****************************valores numericos ********************/
+        System.out.println("Ingrese el numero 1:");
+        num1 = sc.nextInt();
+        System.out.println("Ingrese el numero 2:");
+        num2 = sc.nextInt();
+        resultado = num1+num2;
+        System.out.println("El resultado es: "+ resultado);
+
+
+    }
+
+}
