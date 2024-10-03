@@ -45,19 +45,25 @@ public class ObjCalculadora {
     int numero2 = 0;
     public void IngresoInformacion(String modelo){
         this.modelo = modelo;
-     pantalla = JOptionPane.showInputDialog("Ingrese el tipo de pantalla:");  
+     pantalla = JOptionPane.showInputDialog("Ingrese el tipo de pantalla:");
       /*hay que guardar al atributo modelo*/
         /*al momento de colocar pantalla = se guarda en la variable*/
+        IngresoOperaciones();
     }
     public void IngresoOperaciones(){
         numero1 = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el numero 1:"));
         numero2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero 2:"));
         operacion = JOptionPane.showInputDialog("Ingresar la operacion:");
-        
+        JOptionPane.showMessageDialog(null,"El modelo es: "+modelo+"\nLa pantalla es: "+pantalla);
+        JOptionPane.showMessageDialog(null,"El resultado es:"+this.CalculoOperaciones());
+
+        double resultado = this.CalculoOperaciones();
+        JOptionPane.showMessageDialog(null,"El resultado OP2 es: "+resultado);
+
     }
     public double CalculoOperaciones(){
         double resultado = 0;
-        
+
         switch(operacion){
             case "+":
                 resultado = numero1 + numero2;
@@ -71,7 +77,12 @@ public class ObjCalculadora {
             case "/":
                 if(numero2 == 0){
                     JOptionPane.showMessageDialog(null,"No se puede dividir para 0");
+                }else{
+                    resultado = numero1 / numero2;
                 }
+                break;
+            default:
+                JOptionPane.showMessageDialog(null,"No existe la operacion");
                 break;
         }
         return resultado;
