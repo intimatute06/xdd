@@ -104,3 +104,25 @@ public class InicioPrograma {
 
     }
 }
+
+
+package Calculadora;
+
+import javax.swing.*;
+import java.util.Scanner;
+
+public class ObjCuadrilatero {
+    //declarar las varibales;
+    int largo, ancho, resultado;
+
+    public ObjCuadrilatero(){
+        JOptionPane.showMessageDialog(null,"BIenvenidos a mi cuadrilatero");
+    }
+
+     public void CalcularArea(){
+         resultado = largo * ancho;
+         //constructor es un metodo cuando se instancia la clase new, siempre  piblico
+
+     }
+}
+
